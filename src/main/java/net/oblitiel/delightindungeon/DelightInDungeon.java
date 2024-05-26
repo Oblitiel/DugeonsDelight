@@ -15,6 +15,7 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.oblitiel.delightindungeon.item.ModCreativeModeTabs;
 import net.oblitiel.delightindungeon.item.ModItems;
 import org.slf4j.Logger;
 
@@ -28,6 +29,9 @@ public class DelightInDungeon {
 
     public DelightInDungeon() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+//        Meter las tabs de creativo¿?¿?¿?¿?¿?
+        ModCreativeModeTabs.register(modEventBus);
 
 //        No se que coño es esto pipipipipi
 //        TODO investigar
@@ -55,6 +59,7 @@ public class DelightInDungeon {
         // Añadir objetos a la Tab Ingredientes de creativo
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.CREEPER_STEM);
+            event.accept(ModItems.CREEPER_FRUIT);
         }
     }
 

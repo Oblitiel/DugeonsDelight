@@ -16,6 +16,8 @@ public class ModItems {
     //    Objetos del mod
     public static final RegistryObject<Item> CREEPER_STEM = ITEMS.register("creeper_stem",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CREEPER_FRUIT = ITEMS.register("creeper_fruit",
+            () -> new Item(new Item.Properties()));
 
 
     //    Tampoco se que coño hace esto
